@@ -1,0 +1,179 @@
+{
+    "manifestVersion": 1,
+    "id": "enterprise-asset-governance",
+    "publisher": "MoimHossain",
+    "version": "1.0.192",
+    "name": "Enterprise Asset Governance",
+    "description": "Azure DevOps extensions that provides some ease to developers still preserving the governancce rails intact.",
+    "public": false,
+    "categories": [
+        "Azure Repos"
+    ],
+    "icons": {
+        "default": "assets/images/cloud-oven-red.png"
+    },
+    "targets": [
+        {
+            "id": "Microsoft.VisualStudio.Services"
+        }
+    ],
+    "scopes": [
+        "vso.agentpools_manage",
+        "vso.environment_manage",
+        "vso.analytics",
+        "vso.auditlog",
+        "vso.build",
+        "vso.build_execute",
+        "vso.code_manage",
+        "vso.code_full",
+        "vso.extension_manage",
+        "vso.extension.data_write",
+        "vso.memberentitlementmanagement_write",
+        "vso.graph_manage",
+        "vso.identity_manage",
+        "vso.project_manage",
+        "vso.release_manage",
+        "vso.work_full",
+        "vso.serviceendpoint_manage",
+        "vso.variablegroups_manage",
+        "vso.variablegroups_read",
+        "vso.wiki",
+        "vso.wiki_write",
+        "vso.dashboards_manage",
+        "vso.taskgroups_manage",
+        "vso.symbols_manage",
+        "vso.serviceendpoint_query",
+        "vso.serviceendpoint",
+        "vso.security_manage",
+        "vso.release_manage",
+        "vso.release_execute",
+        "vso.release"
+    ],
+    "contributions": [
+        {
+            "id": "organization-control-center",
+            "type": "ms.vss-web.hub",
+            "targets": [
+                "ms.vss-web.collection-admin-hub-group"
+            ],
+            "properties": {
+                "order": 1,
+                "icon": {
+                    "light": "assets/images/settings.png",
+                    "dark": "assets/images/settings.png"
+                },
+                "name": "Settings",
+                "uri": "dist/organizationConfig/index.html"
+            }
+        },
+        {
+            "id": "project-control-center",
+            "type": "ms.vss-web.hub",
+            "description": "Configure compliance settings for the project.",
+            "targets": [
+                "ms.vss-web.project-admin-hub-group"
+            ],
+            "properties": {
+                "name": "Compliance Settings",
+                "order": 100,
+                "icon": {
+                    "light": "assets/images/settings.png",
+                    "dark": "assets/images/settings.png"
+                },                
+                "uri": "dist/complianceConfig/index.html"
+            }
+        },
+        {
+            "id": "compliance-hub-group",
+            "type": "ms.vss-web.hub-group",
+            "description": "Tribe actions.",
+            "targets": [
+                "ms.vss-web.project-hub-groups-collection"
+            ],
+            "properties": {
+                "icon": {
+                    "light": "assets/images/hub.png",
+                    "dark": "assets/images/hub.png"
+                },
+                "name": "Compliance",
+                "order": 101
+            }
+        },
+        {
+            "id": "custom-repo-contextMenu",
+            "type": "ms.vss-web.menu-item",
+            "targets": ["ms.vss-code-web.command-bar-repository-picker-actions"],
+            "properties": {
+                "uri": "dist/custom-repo-contextMenu/index.html",
+                "registeredObjectId": "custom-repo-contextMenu",
+                "text": "New Governed repository",
+                "iconName": "Add"
+            }
+        },
+        {
+            "id": "governed-repository-action",
+            "type": "ms.vss-web.external-content",
+            "properties": {
+                "uri": "dist/governed-repository/index.html"
+            }
+        },
+        {
+            "id": "assetcompliance",
+            "type": "ms.vss-web.hub",
+            "targets": [
+                ".compliance-hub-group"
+            ],
+            "properties": {
+                "order": 1,
+                "icon": {
+                    "light": "assets/images/hub.png",
+                    "dark": "assets/images/hub.png"
+                },
+                "name": "Asset Governance",
+                "uri": "dist/compliance/index.html"
+            }
+        },
+        {
+            "id": "atlas-copilot",
+            "type": "ms.vss-web.hub",
+            "targets": [
+                ".compliance-hub-group"
+            ],
+            "properties": {
+                "order": 1,
+                "icon": {
+                    "light": "assets/images/air-traffic-controller.png",
+                    "dark": "assets/images/air-traffic-controller.png"
+                },
+                "name": "Atlas Copilot",
+                "uri": "dist/copilot/index.html"
+            }
+        },        
+        {
+            "id": "self-service",
+            "type": "ms.vss-web.hub",
+            "targets": [
+                ".compliance-hub-group"
+            ],
+            "properties": {
+                "order": 1,
+                "icon": {
+                    "light": "assets/images/Compliance.23CEVucgCyd_3b8B.png",
+                    "dark": "assets/images/Compliance.23CEVucgCyd_3b8B.png"
+                },
+                "name": "Self-Service requests",
+                "uri": "dist/governance/index.html"
+            }
+        }
+    ],
+    "files": [
+        {
+            "path": "assets",
+            "addressable": true
+        },
+        {
+            "path": "dist",
+            "addressable": true
+        }
+    ]
+}

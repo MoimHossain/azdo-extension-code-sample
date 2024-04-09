@@ -1,0 +1,68 @@
+#root {
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+
+.icon22 {
+    width: 22;
+    height: 22;
+}
+
+.property-table tr {
+    height: 32px;
+    border-bottom: 1px solid #304852 !important;
+
+}
+
+.work-item-table {
+    min-width: 500px;
+}
+
+.bolt-table-card {
+    width: 100%;
+}
+
+.wrap-text {
+    white-space: break-spaces;
+    word-break: break-all;
+}
+
+.left-aligned-text {
+    text-align: left;
+}
+
+.list-item-icon {
+    margin-left: 4px;
+    margin-top: 4px;
+}
+
+.role-dropdown {
+    width: 380px;
+    margin-bottom: 10px;
+}
+
+.compact-dropdown {
+    width: 160px;
+}
+
+.super-compact-dropdown {
+    width: 100px;
+}
+
+.dialog-bottom-button-container {
+    margin-bottom: 20px;
+    margin-right: 20px;
+    justify-content: end;    
+}
+
+.section-inside-page
+{
+    margin-left: -20px;
+} 
+
+.section-inside-page .bolt-header-with-commandbar 
+{
+    margin-left: 0px !important;
+    margin-top: -10px !important; 
+} 
